@@ -484,10 +484,10 @@ export default function HomePage() {
                 <div className="relative h-48 flex-shrink-0">
                   <Image
                     src={i === 0
-                      ? 'https://images.unsplash.com/photo-1504307651394-5cbef3c57302?w=600&q=80&auto=format&fit=crop'
+                      ? 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format&fit=crop'
                       : i === 1
-                        ? 'https://images.unsplash.com/photo-1581092921461-7d65ca45c2a7?w=600&q=80&auto=format&fit=crop'
-                        : 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80&auto=format&fit=crop'
+                        ? 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80&auto=format&fit=crop'
+                        : 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&q=80&auto=format&fit=crop'
                     }
                     alt={t.company}
                     fill
