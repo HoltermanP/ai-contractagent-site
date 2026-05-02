@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {
   Bot, FileText, Bell, CheckSquare, Lightbulb, BarChart3,
-  ArrowRight, Sparkles, Shield, Zap, Clock, Star, Check, ChevronRight,
+  ArrowRight, Sparkles, Shield, Zap, Clock, Star, Check, ChevronRight, Plug2,
 } from 'lucide-react'
 import AppScreenshot from '@/components/ui/app-screenshot'
 
@@ -290,6 +290,59 @@ export default function HomePage() {
                 </div>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
+          KOPPELINGEN — integraties highlight
+      ══════════════════════════════════════════════ */}
+      <section className="bg-slate-50 border-y border-slate-200 py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+            {/* Tekst */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-widest ring-1 ring-blue-100">
+                <Plug2 className="w-3.5 h-3.5" />Koppelingen
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-5 leading-tight">
+                Naadloos verbonden met<br />
+                <span className="gradient-text">uw bestaande systemen</span>
+              </h2>
+              <p className="text-slate-600 text-lg leading-relaxed mb-4">
+                AI-Contracts integreert direct met Microsoft 365, SharePoint, Teams en gangbare document management systemen. Contracten altijd actueel — zonder handmatig werk.
+              </p>
+              <p className="text-slate-500 text-base leading-relaxed mb-8">
+                Werkt u met Relatics, AFAS of een ander ERP? Via onze REST API koppelen wij AI-Contracts aan uw specifieke infrastructuur. Uw data blijft op Nederlandse servers, volledig GDPR-compliant.
+              </p>
+              <Link
+                href="/koppelingen"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-7 py-3.5 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg"
+              >
+                Bekijk alle koppelingen <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Integratie-kaarten grid */}
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { name: 'SharePoint',  sub: 'Microsoft 365',  color: 'bg-blue-50 border-blue-200',    icon: '🗂️', badge: 'Live sync' },
+                { name: 'Teams',       sub: 'Notificaties',   color: 'bg-indigo-50 border-indigo-200', icon: '💬', badge: 'Alerts' },
+                { name: 'Outlook',     sub: 'E-mailalerts',   color: 'bg-sky-50 border-sky-200',       icon: '📧', badge: 'Verloopalerts' },
+                { name: 'Relatics',    sub: 'DMS Infra',      color: 'bg-slate-100 border-slate-200',  icon: '📐', badge: 'Op aanvraag' },
+                { name: 'AFAS',        sub: 'ERP / Finance',  color: 'bg-orange-50 border-orange-200', icon: '⚙️', badge: 'Op aanvraag' },
+                { name: 'REST API',    sub: 'Maatwerk',       color: 'bg-emerald-50 border-emerald-200', icon: '🔌', badge: 'Enterprise' },
+              ].map((item) => (
+                <div key={item.name} className={`${item.color} border rounded-2xl p-5 flex flex-col items-center text-center card-hover`}>
+                  <div className="text-2xl mb-2">{item.icon}</div>
+                  <div className="font-bold text-slate-900 text-sm leading-tight">{item.name}</div>
+                  <div className="text-slate-500 text-xs mt-0.5 mb-2">{item.sub}</div>
+                  <span className="text-[10px] font-semibold bg-white border border-slate-200 text-slate-600 rounded-full px-2 py-0.5">{item.badge}</span>
+                </div>
+              ))}
+            </div>
+
           </div>
         </div>
       </section>
