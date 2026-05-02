@@ -62,14 +62,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTAs */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-2">
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-slate-400 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/8"
-            >
-              Inloggen
-            </Link>
             <Link
               href="/contact"
               className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-lg hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg shadow-blue-900/30"
@@ -107,14 +101,7 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-2 border-t border-white/10 space-y-2">
-              <Link
-                href="/contact"
-                className="block px-4 py-2.5 text-sm font-medium text-slate-400 hover:text-white rounded-lg transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                Inloggen
-              </Link>
+            <div className="pt-2 border-t border-white/10">
               <Link
                 href="/contact"
                 className="block px-4 py-2.5 text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg text-center"
