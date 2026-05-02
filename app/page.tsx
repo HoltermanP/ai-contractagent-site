@@ -237,9 +237,9 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-slate-950/20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-slate-950/70 rounded-3xl px-5 sm:px-10 py-8 sm:py-14 ring-1 ring-white/10">
+          <div className="bg-slate-950/70 rounded-3xl px-6 sm:px-10 py-8 sm:py-14 ring-1 ring-white/10 overflow-hidden">
             <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm mb-6">De realiteit</p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-8">
+            <h2 className="text-[1.75rem] sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-8">
               Projectleiders verliezen gemiddeld{' '}
               <span className="text-orange-400">10 uur per week</span>{' '}
               aan het zoeken naar contractinformatie.
