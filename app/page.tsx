@@ -22,6 +22,57 @@ const stats = [
   { value: '3×',     label: 'Sneller dan handmatig', icon: Zap },
 ]
 
+const contractTypes = [
+  {
+    name: 'UAV-GC',
+    fullName: 'Geïntegreerde contractvormen',
+    badge: 'D&C · E&C',
+    badgeColor: 'bg-blue-500/15 text-blue-400',
+    description: 'Design & Construct en Engineering & Construct. AI herkent de specifieke risicoverdeling, reviewmomenten en ontwerpverantwoordelijkheid van UAV-GC-contracten.',
+    tags: ['Vraagspecificatie', 'SE-momenten', 'Reviewverplichtingen', 'Garantieclausules'],
+  },
+  {
+    name: 'UAV 2012',
+    fullName: 'Traditionele aanneming',
+    badge: 'Bestek',
+    badgeColor: 'bg-indigo-500/15 text-indigo-400',
+    description: 'De standaard voor traditioneel aanbestede werken. AI kent alle UAV-artikelen en herkent afwijkingen, meer-werk-situaties en verrekenbare hoeveelheden.',
+    tags: ['Bestekken', 'Meer werk', 'Verrekening', 'Staat van wijzigingen'],
+  },
+  {
+    name: 'DBFM / DBFMO',
+    fullName: 'Concessiecontracten',
+    badge: 'Lifecycle',
+    badgeColor: 'bg-cyan-500/15 text-cyan-400',
+    description: 'Lange looptijden, complexe financieringsstructuren en stringente beschikbaarheidsnormen. AI bewaakt alle KPI\'s, prestatienormen en lifecycle-mijlpalen.',
+    tags: ['Beschikbaarheid', 'Prestatienormen', 'Lifecycle', 'Financiering'],
+  },
+  {
+    name: 'Raamcontracten',
+    fullName: 'Raamovereenkomsten & mini-tenders',
+    badge: 'Portfolio',
+    badgeColor: 'bg-emerald-500/15 text-emerald-400',
+    description: 'Meerdere raamovereenkomsten met tientallen deelopdrachten. AI groepeert call-offs, bewaakt prijsafspraken en biedt portfolio-overzicht.',
+    tags: ['Mini-tender', 'Call-offs', 'Deelopdrachten', 'Leveranciersafspraken'],
+  },
+  {
+    name: 'NEC3 / NEC4',
+    fullName: 'Engineering & Construction Contract',
+    badge: 'Internationaal',
+    badgeColor: 'bg-violet-500/15 text-violet-400',
+    description: 'Internationale contractstandaard met early warning- en compensation event-procedures. AI begeleidt het volledige ECC-proces.',
+    tags: ['Early Warning', 'Compensation Events', 'ECC', 'PM-beslissingen'],
+  },
+  {
+    name: 'Basisovereenkomst',
+    fullName: 'Onderaanneming & levering',
+    badge: 'Onderaanneming',
+    badgeColor: 'bg-orange-500/15 text-orange-400',
+    description: 'Onderaannemerscontracten, leveranciersovereenkomsten en dienstverleningscontracten. Beheer uw volledige onderaannemersstelsel op één plek.',
+    tags: ['Onderaanneming', 'Leveranciers', 'Dienstverlening', 'Boeteclausules'],
+  },
+]
+
 const testimonials = [
   {
     quote: 'We besparen onze projectleiders elke week uren aan contractopzoekwerk. Het betaalt zichzelf terug in de eerste maand.',
@@ -77,9 +128,9 @@ export default function HomePage() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-300 mb-10 leading-relaxed max-w-xl">
-                Het slimme contractbeheersysteem voor bouw- en infrabedrijven.
-                Upload contracten, stel vragen in gewone taal en ontvang antwoorden
-                met exacte bronvermelding — direct uit uw eigen documenten.
+                Het toonaangevende AI-platform voor contractbeheer in bouw & infra.
+                Van UAV-GC tot raamcontracten — stel vragen in gewone taal en ontvang
+                antwoorden met exacte bronvermelding, direct uit uw eigen documenten.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -124,6 +175,53 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      {/* ══════════════════════════════════════════════
+          CONTRACT TYPES — donker, expertise showcase
+      ══════════════════════════════════════════════ */}
+      <section className="bg-slate-950 border-b border-white/8 py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 dot-bg opacity-20" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-600/8 rounded-full blur-[80px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-300 text-xs font-bold px-4 py-2 rounded-full mb-5 uppercase tracking-widest">
+              Contractexpertise
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-black text-white mb-5 leading-tight">
+              De enige AI die begrijpt hoe<br />
+              <span className="gradient-text">bouwcontracten écht werken</span>
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              Van UAV-GC tot DBFM, van raamcontracten tot NEC4 — AI-Contractagent kent de structuur, clausules en verplichtingen van elk contracttype in de Nederlandse bouw- en infrasector.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {contractTypes.map((ct) => (
+              <div key={ct.name} className="bg-slate-900 border border-white/8 rounded-2xl p-6 hover:border-blue-500/40 transition-colors group">
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <div className="text-white font-black text-xl mb-0.5">{ct.name}</div>
+                    <div className="text-slate-500 text-xs font-medium">{ct.fullName}</div>
+                  </div>
+                  <div className={`text-xs font-bold px-2.5 py-1 rounded-lg ${ct.badgeColor}`}>{ct.badge}</div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-4">{ct.description}</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {ct.tags.map((tag) => (
+                    <span key={tag} className="text-[11px] text-slate-500 border border-white/8 rounded-lg px-2 py-0.5">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-center text-slate-600 text-sm mt-10">
+            Ook internationale standaarden en eigen contractsjablonen ondersteund — neem contact op voor uw specifieke situatie.
+          </p>
+        </div>
+      </section>
 
       {/* ══════════════════════════════════════════════
           UITDAGING — dramatische foto, tekst er overheen
@@ -313,6 +411,59 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
+          MARKTLEIDER — positionering sectie
+      ══════════════════════════════════════════════ */}
+      <section className="bg-white py-20 lg:py-28 border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-widest ring-1 ring-blue-100">
+                Waarom AI-Contractagent
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-6 leading-tight">
+                De toonaangevende keuze voor AI-contractbeheer in de bouwsector
+              </h2>
+              <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                Terwijl generieke platforms documentopslag bieden, bouwde AI-Contractagent een AI die écht begrijpt hoe contracten in bouw en infra zijn opgebouwd — de clausulestructuren, de risicoverdeling, de verplichtingen.
+              </p>
+              <ul className="space-y-4 mb-10">
+                {[
+                  'Enige platform dat UAV-GC, UAV 2012, DBFM én NEC3/4 native begrijpt',
+                  'Bronvermelding tot op paragraafniveau — altijd controleerbaar',
+                  'Gebouwd met en voor Nederlandse aannemers, projectmanagers en juristen',
+                  'AI specifiek getraind op bouw- en infra-contractkennis',
+                  'Van raamcontract tot deelcontract: alles in één systeem',
+                ].map((p) => (
+                  <li key={p} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-white" />
+                    </div>
+                    <span className="text-slate-700 font-medium">{p}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-7 py-3.5 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg">
+                Plan een kennismaking <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: '#1', label: 'AI-contractplatform voor bouw & infra in Nederland', color: 'text-blue-600' },
+                { value: '100%', label: 'Bronvermelding bij elk AI-antwoord', color: 'text-indigo-600' },
+                { value: '6+', label: 'Contracttypen native ondersteund', color: 'text-cyan-600' },
+                { value: '< 1 dag', label: 'Gemiddelde implementatietijd', color: 'text-violet-600' },
+              ].map((item) => (
+                <div key={item.label} className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center card-hover">
+                  <div className={`text-4xl font-black mb-2 ${item.color}`}>{item.value}</div>
+                  <div className="text-slate-600 text-xs font-medium leading-tight">{item.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════
           TESTIMONIALS — foto-achtergrond sectie +
           drie quote-kaarten met portretfoto's
       ══════════════════════════════════════════════ */}
@@ -389,16 +540,16 @@ export default function HomePage() {
         <div className="lg:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center">
           <div className="px-10 py-16 lg:px-16 lg:py-20 max-w-xl">
             <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-              Transparante prijzen, direct aan de slag
+              Prijzen op maat voor uw organisatie
             </h2>
             <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-              Kies het plan dat bij uw organisatie past. Alle abonnementen inclusief
-              persoonlijke onboarding en directe ondersteuning.
+              Elke organisatie is anders. Wij stellen een transparant voorstel op
+              op basis van uw specifieke situatie — geen verborgen kosten.
             </p>
             <div className="grid grid-cols-3 gap-3 mb-8">
               {[
-                { name: 'Starter', price: '€149/mnd' },
-                { name: 'Pro', price: '€349/mnd' },
+                { name: 'Regionaal', price: 'Op aanvraag' },
+                { name: 'Nationaal', price: 'Op aanvraag' },
                 { name: 'Enterprise', price: 'Op aanvraag' },
               ].map((tier) => (
                 <div key={tier.name} className="bg-white/15 border border-white/25 rounded-xl p-4 text-center">
@@ -407,8 +558,8 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-            <Link href="/pricing" className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
-              Bekijk alle prijzen <ArrowRight className="w-4 h-4" />
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
+              Vraag een offerte aan <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

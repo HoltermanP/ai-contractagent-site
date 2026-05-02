@@ -99,7 +99,7 @@ export default function Footer() {
                 href="/contact"
                 className="inline-flex items-center gap-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:from-blue-500 hover:to-indigo-500 transition-all"
               >
-                Gratis starten →
+                Demo aanvragen →
               </Link>
             </div>
           </div>

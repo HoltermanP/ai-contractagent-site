@@ -73,7 +73,7 @@ export default function Header() {
               href="/contact"
               className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-lg hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg shadow-blue-900/30"
             >
-              Gratis starten
+              Demo aanvragen
             </Link>
           </div>
 
@@ -119,7 +119,7 @@ export default function Header() {
                 className="block px-4 py-2.5 text-sm font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg text-center"
                 onClick={() => setMobileOpen(false)}
               >
-                Gratis starten
+                Demo aanvragen
               </Link>
             </div>
           </div>

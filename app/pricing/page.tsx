@@ -1,104 +1,92 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Check, X, ArrowRight, ChevronDown, Shield, Zap, Star } from 'lucide-react'
+import {
+  Check, ArrowRight, Shield, Zap, Star, Mail, Phone,
+  Bot, FileText, Bell, CheckSquare, BarChart3, Lightbulb, Settings, ChevronDown,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Prijzen — AI-Contractagent',
-  description: 'Transparante prijzen voor AI-Contractagent. Starter vanaf €149/mnd, Professioneel €349/mnd, Enterprise op aanvraag.',
+  description: 'Prijzen op aanvraag. Maatwerk voor uw organisatie. Vraag een demo aan en ontvang een persoonlijk voorstel.',
 }
 
-interface PricingTier {
-  name: string
-  price: string
-  period: string
-  description: string
-  highlight: boolean
-  badge?: string
-  features: { label: string; value: string | boolean }[]
-  cta: string
-}
+const allFeatures = [
+  { icon: Bot,          title: 'AI-Contractagent',               desc: 'Onbeperkt vragen stellen aan uw contracten — antwoorden met bronvermelding tot op paragraafniveau.' },
+  { icon: FileText,     title: 'Contractbeheer',                 desc: 'Alle contracten gestructureerd per project, type en status. Versiebeheer en audittrail inbegrepen.' },
+  { icon: Bell,         title: 'Verloopalerts',                  desc: 'Automatische meldingen via dashboard én e-mail op 90, 60 en 30 dagen voor afloop.' },
+  { icon: CheckSquare,  title: 'Verplichtingen & goedkeuringen', desc: 'Registreer verplichtingen met deadline en verantwoordelijke. Stuur goedkeuringsworkflows aan.' },
+  { icon: Lightbulb,    title: 'AI-Risicodetectie',              desc: 'Automatische kwaliteitsscan op tegenstrijdigheden, onduidelijkheden en risico\'s op portefeuilleniveau.' },
+  { icon: BarChart3,    title: 'AI-Rapportages',                 desc: 'Exporteerbare portfolio-rapportages en management dashboards gegenereerd door AI.' },
+  { icon: Settings,     title: 'Instellingen & beheer',          desc: 'Rollen, gebruikers, aangepaste velden, dataretentie en module-zichtbaarheid volledig instelbaar.' },
+]
 
-const tiers: PricingTier[] = [
+const profiles = [
   {
-    name: 'Starter',
-    price: '€149',
-    period: '/maand',
-    description: 'Ideaal voor kleinere aannemers en adviseurs die willen starten met AI-contractbeheer.',
-    highlight: false,
-    cta: 'Neem contact op',
-    features: [
-      { label: 'Contracten', value: 'Tot 50' },
-      { label: 'Gebruikers', value: '3' },
-      { label: 'AI-vragen per maand', value: '200' },
-      { label: 'Projecten', value: '5' },
-      { label: 'Verloopalerts', value: true },
-      { label: 'AI-Risicodetectie', value: false },
-      { label: 'SSO / SAML', value: false },
-      { label: 'Prioriteitssupport', value: false },
-      { label: 'Eigen domein', value: false },
+    name: 'Regionale aannemer',
+    icon: '🏗️',
+    desc: 'Voor kleinere aannemers en adviseurs die professioneel contractbeheer willen inrichten met AI-ondersteuning.',
+    size: 'Kleine teams',
+    highlights: [
+      'AI-Contractagent volledig beschikbaar',
+      'Contractbeheer & versiebeheer',
+      'Verloopalerts',
+      'Standaard rapportages',
+      'Onboarding-sessie inbegrepen',
     ],
   },
   {
-    name: 'Professioneel',
-    price: '€349',
-    period: '/maand',
-    description: 'Voor groeiende bouw- en infrateams die onbeperkt willen werken met AI-contractbeheer.',
-    highlight: true,
-    badge: 'Meest gekozen',
-    cta: 'Neem contact op',
-    features: [
-      { label: 'Contracten', value: 'Onbeperkt' },
-      { label: 'Gebruikers', value: '10' },
-      { label: 'AI-vragen per maand', value: 'Onbeperkt' },
-      { label: 'Projecten', value: 'Onbeperkt' },
-      { label: 'Verloopalerts', value: true },
-      { label: 'AI-Risicodetectie', value: true },
-      { label: 'SSO / SAML', value: false },
-      { label: 'Prioriteitssupport', value: true },
-      { label: 'Eigen domein', value: false },
+    name: 'Groeiend infrateam',
+    icon: '🔧',
+    featured: true,
+    desc: 'Voor groeiende bouw- en infrateams die diepgaand met AI op hun volledige portfolio willen werken.',
+    size: 'Middelgrote organisaties',
+    highlights: [
+      'Alle modules volledig beschikbaar',
+      'AI-Risicodetectie & geavanceerde analyse',
+      'Onbeperkte contracten & projecten',
+      'Prioriteitssupport',
+      'Dedicated onboarding-traject',
     ],
   },
   {
     name: 'Enterprise',
-    price: 'Op aanvraag',
-    period: '',
-    description: 'Voor grote organisaties met maatwerk-behoeften, SSO, eigen domein en dedicated support.',
-    highlight: false,
-    cta: 'Contact opnemen',
-    features: [
-      { label: 'Contracten', value: 'Onbeperkt' },
-      { label: 'Gebruikers', value: 'Onbeperkt' },
-      { label: 'AI-vragen per maand', value: 'Onbeperkt' },
-      { label: 'Projecten', value: 'Onbeperkt' },
-      { label: 'Verloopalerts', value: true },
-      { label: 'AI-Risicodetectie', value: true },
-      { label: 'SSO / SAML', value: true },
-      { label: 'Prioriteitssupport', value: true },
-      { label: 'Eigen domein', value: true },
+    icon: '🏢',
+    desc: 'Grote organisaties met maatwerk-behoeften, SSO-integratie, eigen domein en een dedicated accountmanager.',
+    size: 'Grote organisaties',
+    highlights: [
+      'Alle modules + maatwerk-uitbreidingen',
+      'SSO / SAML-integratie',
+      'Eigen domein & white-label opties',
+      'Dedicated accountmanager',
+      'SLA op maat & contractuele garanties',
     ],
   },
 ]
 
 const faqs = [
   {
-    q: 'Kan ik overstappen naar een hoger abonnement?',
-    a: 'Ja, op elk moment via uw accountinstellingen. Upgrades zijn direct actief en worden pro-rata verrekend.',
+    q: 'Waarom zijn er geen vaste prijzen op de site?',
+    a: 'Elke organisatie is anders. Het aantal contracten, gebruikers, projecten en gewenste integraties bepaalt samen de investering. Wij geloven in transparantie — daarom stellen we altijd een helder voorstel op na een kennismakingsgesprek.',
   },
   {
-    q: 'Wat gebeurt er met mijn data als ik stop?',
-    a: 'U kunt altijd een export opvragen. Data wordt 30 dagen bewaard na opzegging, daarna permanent verwijderd.',
+    q: 'Hoe verloopt het aankoopproces?',
+    a: 'U vraagt een demo aan, wij demonstreren het platform aan uw team en inventariseren uw specifieke wensen. Binnen enkele werkdagen ontvangt u een persoonlijk voorstel. Bij akkoord zijn we gemiddeld binnen één werkdag operationeel.',
   },
   {
-    q: 'Worden mijn contracten gedeeld met andere klanten?',
-    a: 'Nee. Elke organisatie heeft een volledig geïsoleerde omgeving. Uw contracten worden nooit gebruikt voor AI-training van andere klanten.',
+    q: 'Worden mijn contracten gedeeld met andere klanten of gebruikt voor AI-training?',
+    a: 'Nooit. Elke organisatie heeft een volledig geïsoleerde omgeving. Uw contracten worden uitsluitend gebruikt voor uw eigen AI-queries — nooit voor het trainen van modellen voor andere klanten.',
   },
   {
-    q: 'Welke bestandsformaten worden ondersteund?',
-    a: 'PDF en DOCX, tot 50 MB per bestand. Andere formaten beschikbaar op aanvraag voor Enterprise.',
+    q: 'Welke contracttypen worden ondersteund?',
+    a: 'UAV-GC, UAV 2012, DBFM/DBFMO, raamcontracten, NEC3/NEC4 en basisovereenkomsten worden native ondersteund. Andere contracttypen en internationale standaarden zijn beschikbaar op aanvraag.',
   },
   {
-    q: 'Is er een API beschikbaar?',
-    a: 'Ja, een REST API is beschikbaar voor Enterprise-klanten met volledige documentatie.',
+    q: 'Is er een API beschikbaar voor integratie met onze systemen?',
+    a: 'Ja. Een REST API is beschikbaar voor Enterprise-klanten met volledige documentatie en technische ondersteuning tijdens implementatie.',
+  },
+  {
+    q: 'Hoe zit het met beveiliging en GDPR-compliance?',
+    a: 'AI-Contractagent is volledig GDPR-compliant, ISO 27001-gecertificeerd en data wordt opgeslagen op Nederlandse servers. Wij verstrekken op aanvraag een verwerkersovereenkomst en security-documentatie.',
   },
 ]
 
@@ -109,89 +97,93 @@ const trustItems = [
   { icon: Star,   text: '99,9% uptime SLA' },
 ]
 
-function FeatureValue({ value }: { value: string | boolean }) {
-  if (typeof value === 'boolean') {
-    return value
-      ? <Check className="w-5 h-5 text-green-500 mx-auto" />
-      : <X className="w-4 h-4 text-slate-300 mx-auto" />
-  }
-  return <span className="text-sm font-semibold text-slate-800">{value}</span>
-}
-
 export default function PricingPage() {
   return (
     <div>
-      {/* Header */}
+
+      {/* ── Hero ── */}
       <section className="mesh-bg grid-bg py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-600/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/15 to-indigo-600/10" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl sm:text-6xl font-black text-white mb-5">
-            Simpele, eerlijke{' '}
-            <span className="gradient-text">prijzen</span>
+          <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-300 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-widest">
+            Prijzen op aanvraag
+          </div>
+          <h1 className="text-5xl sm:text-6xl font-black text-white mb-5 leading-tight">
+            Maatwerk voor<br />
+            <span className="gradient-text">uw organisatie</span>
           </h1>
-          <p className="text-slate-400 text-xl mb-8 max-w-xl mx-auto">
-            Kies het plan dat bij uw organisatie past. Persoonlijke onboarding bij elk abonnement inbegrepen.
+          <p className="text-slate-400 text-xl mb-8 max-w-2xl mx-auto">
+            Elke organisatie is anders. Wij stellen een helder, transparant voorstel op op basis van uw specifieke situatie — geen verborgen kosten, geen verrassingen.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-2xl shadow-blue-900/50 text-lg">
+              Vraag een demo aan <ArrowRight className="w-5 h-5" />
+            </Link>
+            <a href="tel:+31201234567" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all text-lg">
+              <Phone className="w-5 h-5" /> Bel ons direct
+            </a>
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
             {trustItems.map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-slate-400 text-sm">
-                <Icon className="w-4 h-4 text-blue-400" />
-                {text}
+                <Icon className="w-4 h-4 text-blue-400" />{text}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Cards */}
-      <section className="bg-slate-50 py-16 lg:py-24">
+      {/* ── Profielen ── */}
+      <section className="bg-slate-50 py-16 lg:py-24 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">Voor elke organisatiegrootte</h2>
+            <p className="text-slate-500 text-lg max-w-xl mx-auto">
+              Of u nu een regionaal aannemersbedrijf bent of een grote infraorganisatie — AI-Contractagent past zich aan.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">
-            {tiers.map((tier) => (
+            {profiles.map((profile) => (
               <div
-                key={tier.name}
-                className={`relative rounded-3xl overflow-hidden flex flex-col transition-all duration-200 ${
-                  tier.highlight
-                    ? 'shadow-2xl shadow-blue-200 scale-105'
-                    : 'shadow-sm hover:shadow-xl'
+                key={profile.name}
+                className={`relative rounded-3xl overflow-hidden flex flex-col ${
+                  profile.featured
+                    ? 'shadow-2xl shadow-blue-200 scale-105 ring-2 ring-blue-500/30'
+                    : 'shadow-sm hover:shadow-xl border border-slate-200'
                 }`}
               >
-                {tier.badge && (
+                {profile.featured && (
                   <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold px-4 py-2 text-center tracking-widest uppercase">
-                    {tier.badge}
+                    Meest gekozen
                   </div>
                 )}
-
-                <div className={`p-8 ${tier.highlight ? 'bg-gradient-to-br from-blue-600 to-indigo-700 text-white' : 'bg-white'}`}>
-                  <h2 className={`text-xl font-bold mb-1 ${tier.highlight ? 'text-white' : 'text-slate-900'}`}>{tier.name}</h2>
-                  <p className={`text-sm mb-6 ${tier.highlight ? 'text-blue-200' : 'text-slate-500'}`}>{tier.description}</p>
-                  <div className="flex items-baseline gap-1 mb-6">
-                    <span className={`text-5xl font-black ${tier.highlight ? 'text-white' : 'text-slate-900'}`}>{tier.price}</span>
-                    {tier.period && (
-                      <span className={`text-base font-medium ${tier.highlight ? 'text-blue-200' : 'text-slate-400'}`}>{tier.period}</span>
-                    )}
+                <div className={`p-8 ${profile.featured ? 'bg-gradient-to-br from-blue-600 to-indigo-700' : 'bg-white'}`}>
+                  <div className="text-3xl mb-3">{profile.icon}</div>
+                  <h3 className={`text-xl font-bold mb-2 ${profile.featured ? 'text-white' : 'text-slate-900'}`}>{profile.name}</h3>
+                  <p className={`text-sm mb-4 ${profile.featured ? 'text-blue-100' : 'text-slate-500'}`}>{profile.desc}</p>
+                  <div className={`text-xs font-semibold mb-6 ${profile.featured ? 'text-blue-200' : 'text-slate-400'}`}>
+                    {profile.size}
                   </div>
                   <Link
                     href="/contact"
                     className={`block text-center font-bold py-3.5 rounded-xl transition-all ${
-                      tier.highlight
+                      profile.featured
                         ? 'bg-white text-blue-700 hover:bg-blue-50 shadow-lg'
                         : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 shadow-md shadow-blue-200'
                     }`}
                   >
-                    {tier.cta}
+                    Vraag offerte aan
                   </Link>
                 </div>
-
-                <div className="bg-white flex-1 p-6 border border-slate-100 border-t-0 rounded-b-3xl">
+                <div className="bg-white flex-1 p-6 border-t border-slate-100">
                   <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Inbegrepen</div>
                   <ul className="space-y-3">
-                    {tier.features.map((feature) => (
-                      <li key={feature.label} className="flex items-center justify-between gap-4">
-                        <span className="text-sm text-slate-600">{feature.label}</span>
-                        <div className="flex-shrink-0">
-                          <FeatureValue value={feature.value} />
+                    {profile.highlights.map((h) => (
+                      <li key={h} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="w-3 h-3 text-white" />
                         </div>
+                        <span className="text-sm text-slate-700">{h}</span>
                       </li>
                     ))}
                   </ul>
@@ -199,15 +191,40 @@ export default function PricingPage() {
               </div>
             ))}
           </div>
-
           <p className="text-center text-sm text-slate-500 mt-8">
             Alle abonnementen inclusief persoonlijke onboarding · Direct opzegbaar · Data in Nederland
           </p>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-white py-20 lg:py-28">
+      {/* ── Alle features ── */}
+      <section className="bg-white py-16 lg:py-24 border-b border-slate-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-black text-slate-900 mb-4">Alles inbegrepen, geen verborgen kosten</h2>
+            <p className="text-slate-500 text-lg">Elk abonnement geeft toegang tot het volledige platform.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {allFeatures.map((f) => {
+              const Icon = f.icon
+              return (
+                <div key={f.title} className="flex gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900 mb-1">{f.title}</div>
+                    <div className="text-slate-500 text-sm leading-relaxed">{f.desc}</div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="bg-slate-50 py-20 lg:py-28">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-slate-900 mb-4">Veelgestelde vragen</h2>
@@ -215,12 +232,12 @@ export default function PricingPage() {
           </div>
           <div className="space-y-3">
             {faqs.map((faq) => (
-              <details key={faq.q} className="group bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-100 transition-colors">
+              <details key={faq.q} className="group bg-white border border-slate-200 rounded-2xl overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-6 py-5 cursor-pointer list-none font-semibold text-slate-900 hover:bg-slate-50 transition-colors">
                   <span>{faq.q}</span>
                   <ChevronDown className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0" />
                 </summary>
-                <div className="px-6 pb-5 pt-2 text-slate-600 leading-relaxed text-sm border-t border-slate-200">
+                <div className="px-6 pb-5 pt-2 text-slate-600 leading-relaxed text-sm border-t border-slate-100">
                   {faq.a}
                 </div>
               </details>
@@ -229,25 +246,26 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ── CTA ── */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-950 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-black text-white mb-4">Nog vragen over onze prijzen?</h2>
-          <p className="text-slate-400 text-lg mb-8">Ons team helpt u graag het juiste abonnement kiezen.</p>
+          <h2 className="text-4xl font-black text-white mb-4">Klaar voor een persoonlijk gesprek?</h2>
+          <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
+            Plan een demo en ontvang binnen twee werkdagen een transparant voorstel op maat.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-2xl shadow-blue-900/50"
             >
-              Neem contact op
-              <ArrowRight className="w-4 h-4" />
+              Demo aanvragen <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              href="/features"
+            <a
+              href="mailto:info@ai-contractagent.nl"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all"
             >
-              Bekijk alle functies
-            </Link>
+              <Mail className="w-4 h-4" /> info@ai-contractagent.nl
+            </a>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { HardHat, Gauge, Scale, ShoppingCart, ArrowRight, Star, Check } from 'lucide-react'
+import { HardHat, Gauge, Scale, ShoppingCart, Building2, Layers, ArrowRight, Star, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Toepassingen — AI-Contractagent',
@@ -77,6 +77,40 @@ const useCases: UseCase[] = [
     accentBg: 'bg-violet-50',
     accentBorder: 'border-violet-200',
     flip: false,
+  },
+  {
+    icon: Building2,
+    role: 'Contractmanager UAV-GC',
+    tagline: 'Grip op Design & Construct-verplichtingen',
+    problem: 'Bij UAV-GC-contracten draagt de aannemer de ontwerpverantwoordelijkheid. Reviewmomenten, Systems Engineering-verplichtingen en beschikbaarheidsgaranties zijn complex en verspreid over tientallen bijlagen en vraagspecificaties.',
+    solution: 'AI-Contractagent indexeert alle UAV-GC-documenten inclusief Vraagspecificaties en bijlagen. Stel vragen als "Wanneer is het volgende SE-reviewmoment voor deelsysteem X?" en krijg direct antwoord met bronvermelding.',
+    wins: ['SE-reviewmomenten automatisch gevolgd', 'Vraagspecificatie direct doorzoekbaar', 'Vroegtijdige signalering van compliance-risico\'s'],
+    quote: 'Onze D&C-contracten zijn complex. AI-Contractagent maakt ze beheersbaar.',
+    quoteAuthor: 'Willem Dijkstra',
+    quoteRole: 'Contractmanager, Dura Vermeer Infra',
+    photo: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=960&q=90&auto=format&fit=crop',
+    personPhoto: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&q=80&auto=format&fit=crop&crop=face',
+    gradient: 'from-blue-700 to-cyan-600',
+    accentBg: 'bg-blue-50',
+    accentBorder: 'border-blue-200',
+    flip: false,
+  },
+  {
+    icon: Layers,
+    role: 'Raamcontractencoördinator',
+    tagline: 'Regie over uw volledige raamcontractenportfolio',
+    problem: 'Meerdere raamovereenkomsten met tientallen deelopdrachten en call-offs. Prijsafspraken, leveranciersverplichtingen en looptijden zijn verspreid over honderden documenten zonder centraal overzicht.',
+    solution: 'AI-Contractagent groepeert alle deelopdrachten per raamcontract en beantwoordt vragen als "Wat zijn de call-off condities voor leverancier X in raamovereenkomst Y?" — in seconden.',
+    wins: ['Portfolio-overzicht per raamcontract', 'Call-off condities direct opvraagbaar', 'Verloopdatums bewaakt over alle deelopdrachten'],
+    quote: 'Onze raamcontracten zijn eindelijk beheersbaar. Eén systeem voor het gehele portfolio.',
+    quoteAuthor: 'Irene van der Plas',
+    quoteRole: 'Senior Inkoopcoördinator, BAM Infra',
+    photo: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=960&q=90&auto=format&fit=crop',
+    personPhoto: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&q=80&auto=format&fit=crop&crop=face',
+    gradient: 'from-teal-600 to-emerald-600',
+    accentBg: 'bg-teal-50',
+    accentBorder: 'border-teal-200',
+    flip: true,
   },
   {
     icon: ShoppingCart,
@@ -241,15 +275,15 @@ export default function UseCasesPage() {
         <div className="absolute inset-0 bg-slate-950/55" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-5">
-            Herkenbaar? Probeer het 14 dagen gratis.
+            Herkenbaar? Laat ons uw contracten analyseren.
           </h2>
-          <p className="text-slate-300 text-xl mb-8">Geen creditcard vereist. Direct aan de slag.</p>
+          <p className="text-slate-300 text-xl mb-8">Plan een demo en ontdek wat AI-Contractagent voor uw organisatie kan betekenen.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-2xl text-lg">
-              Start gratis proefperiode <ArrowRight className="w-5 h-5" />
+              Demo aanvragen <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link href="/pricing" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-all text-lg">
-              Bekijk prijzen
+            <Link href="/features" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-all text-lg">
+              Bekijk alle functies
             </Link>
           </div>
         </div>
