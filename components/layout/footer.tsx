@@ -9,7 +9,6 @@ const productLinks = [
 ]
 
 const companyLinks = [
-  { href: '#',          label: 'Over ons' },
   { href: '/contact',   label: 'Contact' },
   { href: '#',          label: 'Privacy' },
   { href: '#',          label: 'Algemene voorwaarden' },
