@@ -16,7 +16,7 @@ const companyLinks = [
 
 const supportLinks = [
   { href: '#', label: 'Handleiding' },
-  { href: '#', label: 'API-documentatie' },
+  { href: '/koppelingen', label: 'API-koppelingen' },
   { href: '#', label: 'Status' },
 ]
 
