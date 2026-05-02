@@ -119,8 +119,8 @@ export default function PricingPage() {
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-2xl shadow-blue-900/50 text-lg">
               Vraag een demo aan <ArrowRight className="w-5 h-5" />
             </Link>
-            <a href="tel:+31201234567" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all text-lg">
-              <Phone className="w-5 h-5" /> Bel ons direct
+            <a href="tel:0630985351" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all text-lg">
+              <Phone className="w-5 h-5" /> 06-30985351
             </a>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-5">
@@ -261,10 +261,10 @@ export default function PricingPage() {
               Demo aanvragen <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="mailto:info@ai-contractagent.nl"
+              href="mailto:info@ai-group.nl"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white font-semibold px-8 py-4 rounded-xl hover:border-white/40 hover:bg-white/5 transition-all"
             >
-              <Mail className="w-4 h-4" /> info@ai-contractagent.nl
+              <Mail className="w-4 h-4" /> info@ai-group.nl
             </a>
           </div>
         </div>

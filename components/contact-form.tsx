@@ -2,12 +2,11 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Clock, CheckCircle2, Send } from 'lucide-react'
+import { Mail, Phone, Clock, CheckCircle2, Send } from 'lucide-react'
 
 const contactInfo = [
-  { icon: Mail,   label: 'E-mail',          value: 'info@ai-contractagent.nl',          href: 'mailto:info@ai-contractagent.nl' },
-  { icon: Phone,  label: 'Telefoon',         value: '+31 (0)20 123 4567',               href: 'tel:+31201234567' },
-  { icon: MapPin, label: 'Adres',            value: 'Herengracht 182, 1016 BR Amsterdam', href: null },
+  { icon: Mail,  label: 'E-mail',    value: 'info@ai-group.nl', href: 'mailto:info@ai-group.nl' },
+  { icon: Phone, label: 'Telefoon', value: '06-30985351',      href: 'tel:0630985351' },
   { icon: Clock,  label: 'Beschikbaarheid',  value: 'Ma–Vr 09:00–17:30',               href: null },
 ]
 
@@ -101,16 +100,12 @@ export default function ContactForm() {
           {/* Amsterdam gracht foto — volledig zichtbaar */}
           <div className="relative flex-1 min-h-[300px]">
             <Image
-              src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=880&q=90&auto=format&fit=crop"
-              alt="Herengracht Amsterdam"
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=880&q=90&auto=format&fit=crop"
+              alt="AI-Contractagent — contractbeheer voor bouw & infra"
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950/80" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <div className="text-white font-bold text-lg">Herengracht 182</div>
-              <div className="text-white/70">1016 BR Amsterdam</div>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950/70" />
           </div>
 
           {/* Contact info */}

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Bot, Mail, MapPin, Phone } from 'lucide-react'
+import { Bot, Mail, Phone } from 'lucide-react'
 
 const productLinks = [
   { href: '/features',   label: 'Functies' },
@@ -39,18 +39,14 @@ export default function Footer() {
               AI-contractbeheer voor bouw & infra. Stel vragen aan uw contracten en beheer alles op één plek.
             </p>
             <div className="space-y-2">
-              <a href="mailto:info@ai-contractagent.nl" className="flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
+              <a href="mailto:info@ai-group.nl" className="flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
-                info@ai-contractagent.nl
+                info@ai-group.nl
               </a>
-              <a href="tel:+31201234567" className="flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
+              <a href="tel:0630985351" className="flex items-center gap-2 text-sm text-slate-500 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-                +31 (0)20 123 4567
+                06-30985351
               </a>
-              <div className="flex items-center gap-2 text-sm text-slate-500">
-                <MapPin className="w-4 h-4" />
-                Herengracht 182, Amsterdam
-              </div>
             </div>
           </div>
 
@@ -109,8 +105,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
           <p>© 2025 AI-Contractagent BV · KVK 12345678</p>
           <div className="flex items-center gap-4">
-            <a href="mailto:privacy@ai-contractagent.nl" className="hover:text-slate-400 transition-colors">
-              privacy@ai-contractagent.nl
+            <a href="mailto:info@ai-group.nl" className="hover:text-slate-400 transition-colors">
+              info@ai-group.nl
             </a>
             <span className="w-1 h-1 rounded-full bg-slate-700" />
             <span>Made in Amsterdam 🇳🇱</span>
