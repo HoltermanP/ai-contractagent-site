@@ -227,7 +227,7 @@ export default function HomePage() {
           UITDAGING — dramatische foto, tekst er overheen
           Foto zichtbaar op ~55%
       ══════════════════════════════════════════════ */}
-      <section className="relative py-32 lg:py-40 overflow-hidden">
+      <section className="relative py-16 lg:py-40 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80&auto=format&fit=crop"
           alt="Infrastructuurproject Nederland"
@@ -237,7 +237,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-slate-950/20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-slate-950/70 rounded-3xl px-10 py-14 ring-1 ring-white/10">
+          <div className="bg-slate-950/70 rounded-3xl px-5 sm:px-10 py-8 sm:py-14 ring-1 ring-white/10">
             <p className="text-blue-300 font-semibold uppercase tracking-widest text-sm mb-6">De realiteit</p>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-8">
               Projectleiders verliezen gemiddeld{' '}
@@ -325,7 +325,7 @@ export default function HomePage() {
             </div>
 
             {/* Integratie-kaarten grid */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
                 { name: 'SharePoint',  sub: 'Microsoft 365',  color: 'bg-blue-50 border-blue-200',    icon: '🗂️', badge: 'Live sync' },
                 { name: 'Teams',       sub: 'Notificaties',   color: 'bg-indigo-50 border-indigo-200', icon: '💬', badge: 'Alerts' },
@@ -378,7 +378,7 @@ export default function HomePage() {
 
         {/* Content kolom */}
         <div className="lg:w-1/2 bg-slate-900 flex items-center">
-          <div className="px-10 py-16 lg:px-16 lg:py-20 max-w-xl">
+          <div className="px-6 sm:px-10 py-10 sm:py-16 lg:px-16 lg:py-20 max-w-xl">
             <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-300 text-sm font-semibold px-4 py-2 rounded-full mb-7">
               Resultaat in de praktijk
             </div>
@@ -428,8 +428,10 @@ export default function HomePage() {
               Stel een vraag, krijg een antwoord met bronvermelding — in seconden.
             </p>
           </div>
-          <div className="max-w-5xl mx-auto">
-            <AppScreenshot />
+          <div className="max-w-5xl mx-auto overflow-x-auto">
+            <div className="min-w-[400px]">
+              <AppScreenshot />
+            </div>
           </div>
         </div>
       </section>
@@ -446,15 +448,15 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-blue-950/55" />
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
             {stats.map((s) => {
               const Icon = s.icon
               return (
-                <div key={s.label} className="bg-slate-950/60 rounded-2xl py-8 px-4 ring-1 ring-white/10">
-                  <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-7 h-7 text-white" />
+                <div key={s.label} className="bg-slate-950/60 rounded-2xl py-6 sm:py-8 px-3 sm:px-4 ring-1 ring-white/10">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   </div>
-                  <div className="text-5xl font-black text-white mb-2">{s.value}</div>
+                  <div className="text-4xl sm:text-5xl font-black text-white mb-2">{s.value}</div>
                   <div className="text-blue-100 text-sm font-medium">{s.label}</div>
                 </div>
               )
@@ -674,7 +676,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════
           FINAL CTA — foto zichtbaar op ~55%
       ══════════════════════════════════════════════ */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80&auto=format&fit=crop"
           alt="Bouwkraan zonsondergang"
@@ -684,11 +686,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-slate-950/20" />
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-slate-950/70 rounded-3xl px-10 py-16 ring-1 ring-white/10">
+          <div className="bg-slate-950/70 rounded-3xl px-5 sm:px-10 py-10 sm:py-16 ring-1 ring-white/10">
             <div className="inline-flex items-center gap-2 glass text-blue-300 text-sm font-semibold px-4 py-2 rounded-full mb-8">
               <Sparkles className="w-4 h-4" />Klaar om te starten?
             </div>
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-black text-white mb-6 leading-tight">
               Moderniseer uw<br />
               <span className="gradient-text">contractbeheer</span>
             </h2>

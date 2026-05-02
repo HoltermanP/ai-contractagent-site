@@ -185,11 +185,11 @@ export default function KoppelingenPage() {
         <div className="lg:w-1/2 bg-slate-950 flex items-center relative overflow-hidden">
           <div className="absolute inset-0 grid-bg opacity-30" />
           <div className="absolute top-0 left-0 w-[500px] h-[400px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="relative px-10 py-16 lg:px-16 lg:py-20 max-w-xl">
+          <div className="relative px-6 sm:px-10 py-12 sm:py-16 lg:px-16 lg:py-20 max-w-xl">
             <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-300 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-widest">
               Integraties & Koppelingen
             </div>
-            <h1 className="text-5xl lg:text-6xl font-black text-white mb-5 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-5 leading-tight">
               Naadloos verbonden<br />
               <span className="gradient-text">met uw werkomgeving</span>
             </h1>

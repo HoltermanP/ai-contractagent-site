@@ -147,8 +147,8 @@ export default function FeaturesPage() {
         {/* Donkere tekst-kant */}
         <div className="lg:w-1/2 bg-slate-950 flex items-center relative overflow-hidden">
           <div className="absolute inset-0 grid-bg opacity-30" />
-          <div className="relative px-10 py-16 lg:px-16 lg:py-20 max-w-xl">
-            <h1 className="text-5xl lg:text-6xl font-black text-white mb-5 leading-tight">
+          <div className="relative px-6 sm:px-10 py-12 sm:py-16 lg:px-16 lg:py-20 max-w-xl">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-5 leading-tight">
               Alle functies.<br />
               <span className="gradient-text">Één platform.</span>
             </h1>

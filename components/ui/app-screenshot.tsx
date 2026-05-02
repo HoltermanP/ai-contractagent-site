@@ -22,7 +22,7 @@ export default function AppScreenshot() {
         {/* App body */}
         <div className="bg-slate-900 flex" style={{ height: '360px' }}>
           {/* Sidebar */}
-          <div className="w-52 bg-slate-950 border-r border-white/8 flex flex-col p-3 flex-shrink-0">
+          <div className="hidden sm:flex w-52 bg-slate-950 border-r border-white/8 flex-col p-3 flex-shrink-0">
             <div className="flex items-center gap-2 px-2 py-2 mb-4">
               <div className="w-6 h-6 rounded-md bg-gradient-to-br from-blue-500 to-indigo-500" />
               <span className="text-xs font-semibold text-white">Contractagent</span>

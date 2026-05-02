@@ -148,7 +148,7 @@ export default function PricingPage() {
                 key={profile.name}
                 className={`relative rounded-3xl overflow-hidden flex flex-col ${
                   profile.featured
-                    ? 'shadow-2xl shadow-blue-200 scale-105 ring-2 ring-blue-500/30'
+                    ? 'shadow-2xl shadow-blue-200 md:scale-105 ring-2 ring-blue-500/30'
                     : 'shadow-sm hover:shadow-xl border border-slate-200'
                 }`}
               >
