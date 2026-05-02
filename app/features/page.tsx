@@ -7,8 +7,8 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Functies — AI-Contractagent',
-  description: 'Ontdek alle modules van AI-Contractagent: AI-contractvragen, risicodetectie, verloopalerts en rapportages.',
+  title: 'Functies — AI-Contracts',
+  description: 'Ontdek alle modules van AI-Contracts: AI-contractvragen, risicodetectie, verloopalerts en rapportages.',
 }
 
 interface Module {
@@ -27,7 +27,7 @@ const modules: Module[] = [
     icon: Bot,
     color: 'from-blue-600 to-indigo-600',
     textAccent: 'text-blue-600',
-    title: 'AI-Contractagent',
+    title: 'AI-Contracts',
     description: 'De kern van het platform. Stel vragen in gewone taal en krijg directe antwoorden met exacte bronvermelding — documentnaam én paragraaf.',
     bullets: [
       'Vragen over portfolio, project of één contract',
@@ -153,7 +153,7 @@ export default function FeaturesPage() {
               <span className="gradient-text">Één platform.</span>
             </h1>
             <p className="text-slate-400 text-xl leading-relaxed mb-8">
-              AI-Contractagent biedt alles wat bouw- en infrabedrijven nodig hebben voor
+              AI-Contracts biedt alles wat bouw- en infrabedrijven nodig hebben voor
               professioneel, AI-ondersteund contractbeheer.
             </p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-7 py-3.5 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg">

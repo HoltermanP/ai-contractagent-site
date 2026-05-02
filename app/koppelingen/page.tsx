@@ -7,8 +7,8 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Koppelingen — AI-Contractagent',
-  description: 'AI-Contractagent integreert naadloos met Microsoft 365, Teams, SharePoint en andere document management systemen.',
+  title: 'Koppelingen — AI-Contracts',
+  description: 'AI-Contracts integreert naadloos met Microsoft 365, Teams, SharePoint en andere document management systemen.',
 }
 
 const microsoftIntegrations = [
@@ -19,12 +19,12 @@ const microsoftIntegrations = [
     bg: 'bg-blue-50',
     status: 'Beschikbaar',
     statusColor: 'bg-green-100 text-green-700',
-    description: 'Synchroniseer contracten rechtstreeks vanuit uw SharePoint-documentbibliotheken. AI-Contractagent leest uw bestaande mapstructuur uit en indexeert contracten automatisch.',
+    description: 'Synchroniseer contracten rechtstreeks vanuit uw SharePoint-documentbibliotheken. AI-Contracts leest uw bestaande mapstructuur uit en indexeert contracten automatisch.',
     features: [
       'Automatische synchronisatie van documenten',
       'Bestaande mapstructuur blijft intact',
       'Ondersteunt PDF, DOCX en andere formaten',
-      'Versiehistorie uit SharePoint zichtbaar in AI-Contractagent',
+      'Versiehistorie uit SharePoint zichtbaar in AI-Contracts',
       'Rechtenstructuur van SharePoint wordt gerespecteerd',
     ],
   },
@@ -35,11 +35,11 @@ const microsoftIntegrations = [
     bg: 'bg-indigo-50',
     status: 'Beschikbaar',
     statusColor: 'bg-green-100 text-green-700',
-    description: 'Ontvang verloopalerts en verplichtingen-meldingen direct in uw Teams-kanaal. Stel vragen aan de AI-Contractagent vanuit Teams zonder de app te verlaten.',
+    description: 'Ontvang verloopalerts en verplichtingen-meldingen direct in uw Teams-kanaal. Stel vragen aan de AI-Contracts vanuit Teams zonder de app te verlaten.',
     features: [
       'Verloopalerts als Teams-notificaties',
       'Verplichtingen-updates in uw projectkanaal',
-      'AI-Contractagent bot voor directe queries',
+      'AI-Contracts bot voor directe queries',
       'Koppeling met bestaande Teams-projectstructuur',
       'Goedkeuringsverzoeken via Teams-workflow',
     ],
@@ -51,7 +51,7 @@ const microsoftIntegrations = [
     bg: 'bg-cyan-50',
     status: 'Beschikbaar',
     statusColor: 'bg-green-100 text-green-700',
-    description: 'Verloopalerts en verplichtingen-meldingen rechtstreeks in uw Outlook-inbox. Importeer contractbijlagen uit e-mails direct naar AI-Contractagent.',
+    description: 'Verloopalerts en verplichtingen-meldingen rechtstreeks in uw Outlook-inbox. Importeer contractbijlagen uit e-mails direct naar AI-Contracts.',
     features: [
       'Automatische e-mailalerts op 90/60/30 dagen',
       'Contractbijlagen direct importeren vanuit inbox',
@@ -67,7 +67,7 @@ const microsoftIntegrations = [
     bg: 'bg-blue-50',
     status: 'Beschikbaar',
     statusColor: 'bg-green-100 text-green-700',
-    description: 'Upload DOCX-contracten rechtstreeks vanuit Word. AI-Contractagent behoudt de volledige opmaak, inhoudsopgave en bijlagen voor nauwkeurige AI-analyse.',
+    description: 'Upload DOCX-contracten rechtstreeks vanuit Word. AI-Contracts behoudt de volledige opmaak, inhoudsopgave en bijlagen voor nauwkeurige AI-analyse.',
     features: [
       'Native DOCX-ondersteuning inclusief opmaak',
       'Inhoudsopgave gebruikt voor betere bronvermelding',
@@ -84,7 +84,7 @@ const dmsIntegrations = [
     color: 'from-orange-500 to-amber-500',
     status: 'Op aanvraag',
     statusColor: 'bg-amber-100 text-amber-700',
-    description: 'Koppeling met Relatics voor Systems Engineering-documentatie en vereistenbeheer. AI-Contractagent leest SE-documenten en koppelt contractverplichtingen aan requirements.',
+    description: 'Koppeling met Relatics voor Systems Engineering-documentatie en vereistenbeheer. AI-Contracts leest SE-documenten en koppelt contractverplichtingen aan requirements.',
     features: [
       'Importeer vereisten en verificatiepunten',
       'Koppeling tussen contractclausules en requirements',
@@ -120,7 +120,7 @@ const dmsIntegrations = [
     color: 'from-red-500 to-orange-500',
     status: 'Op aanvraag',
     statusColor: 'bg-amber-100 text-amber-700',
-    description: 'Financiële contractdata uit uw ERP-systeem rechtstreeks zichtbaar in AI-Contractagent. Contractwaarden, factuurmomenten en budgetten altijd actueel.',
+    description: 'Financiële contractdata uit uw ERP-systeem rechtstreeks zichtbaar in AI-Contracts. Contractwaarden, factuurmomenten en budgetten altijd actueel.',
     features: [
       'Contractwaarden gesynchroniseerd vanuit ERP',
       'Factuurmomenten als verplichtingen zichtbaar',
@@ -132,7 +132,7 @@ const dmsIntegrations = [
     color: 'from-slate-600 to-slate-800',
     status: 'Enterprise',
     statusColor: 'bg-blue-100 text-blue-700',
-    description: 'AI-Contractagent biedt een volledige REST API voor integratie met uw eigen document management systeem, ERP of maatwerk-platform.',
+    description: 'AI-Contracts biedt een volledige REST API voor integratie met uw eigen document management systeem, ERP of maatwerk-platform.',
     features: [
       'Volledige REST API met Swagger-documentatie',
       'Webhook-ondersteuning voor realtime events',
@@ -157,7 +157,7 @@ const principles = [
   {
     icon: RefreshCw,
     title: 'Realtime synchronisatie',
-    desc: 'Documenten die u in SharePoint of uw DMS bijwerkt worden automatisch opnieuw geïndexeerd in AI-Contractagent. Uw AI werkt altijd met de meest actuele versie.',
+    desc: 'Documenten die u in SharePoint of uw DMS bijwerkt worden automatisch opnieuw geïndexeerd in AI-Contracts. Uw AI werkt altijd met de meest actuele versie.',
   },
   {
     icon: Shield,
@@ -194,7 +194,7 @@ export default function KoppelingenPage() {
               <span className="gradient-text">met uw werkomgeving</span>
             </h1>
             <p className="text-slate-400 text-lg leading-relaxed mb-8">
-              AI-Contractagent integreert direct met Microsoft 365, SharePoint, Teams en de document management systemen die u al gebruikt — zonder dubbel werk of datamigratieprojecten.
+              AI-Contracts integreert direct met Microsoft 365, SharePoint, Teams en de document management systemen die u al gebruikt — zonder dubbel werk of datamigratieprojecten.
             </p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-7 py-3.5 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg">
               Vraag een demo aan <ArrowRight className="w-4 h-4" />
@@ -244,7 +244,7 @@ export default function KoppelingenPage() {
               Diep geïntegreerd met Microsoft 365
             </h2>
             <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-              De meeste bouw- en infraorganisaties werken al met Microsoft 365. AI-Contractagent sluit hier naadloos op aan.
+              De meeste bouw- en infraorganisaties werken al met Microsoft 365. AI-Contracts sluit hier naadloos op aan.
             </p>
           </div>
 

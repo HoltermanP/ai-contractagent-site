@@ -4,9 +4,9 @@ import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 
 export const metadata: Metadata = {
-  title: 'AI-Contractagent — Slim contractbeheer voor bouw & infra',
+  title: 'AI-Contracts — Slim contractbeheer voor bouw & infra',
   description:
-    'AI-Contractagent is het slimme contractbeheersysteem voor bouw- en infrabedrijven. Upload contracten, stel vragen in gewone taal en krijg antwoorden met bronvermelding.',
+    'AI-Contracts is het slimme contractbeheersysteem voor bouw- en infrabedrijven. Upload contracten, stel vragen in gewone taal en krijg antwoorden met bronvermelding.',
   keywords: 'contractbeheer, AI, bouw, infra, contractagent, juridisch, projectmanagement',
 }
 

@@ -65,7 +65,7 @@ export default function AppScreenshot() {
             {/* Top bar */}
             <div className="px-4 py-3 border-b border-white/8 flex items-center justify-between">
               <div>
-                <div className="text-sm font-semibold text-white">AI-Contractagent</div>
+                <div className="text-sm font-semibold text-white">AI-Contracts</div>
                 <div className="text-xs text-slate-400">Project: Brug A15 — 24 documenten</div>
               </div>
               <div className="flex gap-2">

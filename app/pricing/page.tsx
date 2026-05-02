@@ -6,12 +6,12 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Prijzen — AI-Contractagent',
+  title: 'Prijzen — AI-Contracts',
   description: 'Prijzen op aanvraag. Maatwerk voor uw organisatie. Vraag een demo aan en ontvang een persoonlijk voorstel.',
 }
 
 const allFeatures = [
-  { icon: Bot,          title: 'AI-Contractagent',               desc: 'Onbeperkt vragen stellen aan uw contracten — antwoorden met bronvermelding tot op paragraafniveau.' },
+  { icon: Bot,          title: 'AI-Contracts',               desc: 'Onbeperkt vragen stellen aan uw contracten — antwoorden met bronvermelding tot op paragraafniveau.' },
   { icon: FileText,     title: 'Contractbeheer',                 desc: 'Alle contracten gestructureerd per project, type en status. Versiebeheer en audittrail inbegrepen.' },
   { icon: Bell,         title: 'Verloopalerts',                  desc: 'Automatische meldingen via dashboard én e-mail op 90, 60 en 30 dagen voor afloop.' },
   { icon: CheckSquare,  title: 'Verplichtingen & goedkeuringen', desc: 'Registreer verplichtingen met deadline en verantwoordelijke. Stuur goedkeuringsworkflows aan.' },
@@ -27,7 +27,7 @@ const profiles = [
     desc: 'Voor kleinere aannemers en adviseurs die professioneel contractbeheer willen inrichten met AI-ondersteuning.',
     size: 'Kleine teams',
     highlights: [
-      'AI-Contractagent volledig beschikbaar',
+      'AI-Contracts volledig beschikbaar',
       'Contractbeheer & versiebeheer',
       'Verloopalerts',
       'Standaard rapportages',
@@ -86,7 +86,7 @@ const faqs = [
   },
   {
     q: 'Hoe zit het met beveiliging en GDPR-compliance?',
-    a: 'AI-Contractagent is volledig GDPR-compliant, ISO 27001-gecertificeerd en data wordt opgeslagen op Nederlandse servers. Wij verstrekken op aanvraag een verwerkersovereenkomst en security-documentatie.',
+    a: 'AI-Contracts is volledig GDPR-compliant, ISO 27001-gecertificeerd en data wordt opgeslagen op Nederlandse servers. Wij verstrekken op aanvraag een verwerkersovereenkomst en security-documentatie.',
   },
 ]
 
@@ -139,7 +139,7 @@ export default function PricingPage() {
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">Voor elke organisatiegrootte</h2>
             <p className="text-slate-500 text-lg max-w-xl mx-auto">
-              Of u nu een regionaal aannemersbedrijf bent of een grote infraorganisatie — AI-Contractagent past zich aan.
+              Of u nu een regionaal aannemersbedrijf bent of een grote infraorganisatie — AI-Contracts past zich aan.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-start">

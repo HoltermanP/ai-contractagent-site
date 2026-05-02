@@ -3,8 +3,8 @@ import Image from 'next/image'
 import ContactForm from '@/components/contact-form'
 
 export const metadata: Metadata = {
-  title: 'Contact — AI-Contractagent',
-  description: 'Neem contact op met AI-Contractagent. Vraag een demo aan, stel een vraag of neem vrijblijvend contact op.',
+  title: 'Contact — AI-Contracts',
+  description: 'Neem contact op met AI-Contracts. Vraag een demo aan, stel een vraag of neem vrijblijvend contact op.',
 }
 
 export default function ContactPage() {

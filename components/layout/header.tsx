@@ -41,7 +41,7 @@ export default function Header() {
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-900/50">
               <Bot className="w-4.5 h-4.5 text-white w-[18px] h-[18px]" />
             </div>
-            <span className="text-[15px]">AI-Contractagent</span>
+            <span className="text-[15px]">AI-Contracts</span>
           </Link>
 
           {/* Desktop nav */}

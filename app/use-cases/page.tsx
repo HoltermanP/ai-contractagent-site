@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { HardHat, Gauge, Scale, ShoppingCart, Building2, Layers, ArrowRight, Star, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Toepassingen — AI-Contractagent',
-  description: 'Ontdek hoe AI-Contractagent aannemers, projectmanagers, juristen en inkoopmanagers helpt.',
+  title: 'Toepassingen — AI-Contracts',
+  description: 'Ontdek hoe AI-Contracts aannemers, projectmanagers, juristen en inkoopmanagers helpt.',
 }
 
 interface UseCase {
@@ -49,7 +49,7 @@ const useCases: UseCase[] = [
     role: 'Projectmanager infra',
     tagline: 'Nooit meer verplichtingen missen',
     problem: 'Contractverplichtingen missen doordat ze verspreid zijn over meerdere bijlagen en addenda. Gevolg: boetes, vertraging en herstelwerk.',
-    solution: 'AI-Contractagent scant alle documenten en geeft wekelijkse alerts voor naderende verplichtingen, gekoppeld aan de juiste contractpartij en deadline.',
+    solution: 'AI-Contracts scant alle documenten en geeft wekelijkse alerts voor naderende verplichtingen, gekoppeld aan de juiste contractpartij en deadline.',
     wins: ['Wekelijkse verplichtingen-alerts', 'Overzicht per project', 'Minder gemiste deadlines'],
     quote: 'Eindelijk één overzicht van wat wij moeten leveren en wanneer.',
     quoteAuthor: 'Sandra Koopman',
@@ -83,9 +83,9 @@ const useCases: UseCase[] = [
     role: 'Contractmanager UAV-GC',
     tagline: 'Grip op Design & Construct-verplichtingen',
     problem: 'Bij UAV-GC-contracten draagt de aannemer de ontwerpverantwoordelijkheid. Reviewmomenten, Systems Engineering-verplichtingen en beschikbaarheidsgaranties zijn complex en verspreid over tientallen bijlagen en vraagspecificaties.',
-    solution: 'AI-Contractagent indexeert alle UAV-GC-documenten inclusief Vraagspecificaties en bijlagen. Stel vragen als "Wanneer is het volgende SE-reviewmoment voor deelsysteem X?" en krijg direct antwoord met bronvermelding.',
+    solution: 'AI-Contracts indexeert alle UAV-GC-documenten inclusief Vraagspecificaties en bijlagen. Stel vragen als "Wanneer is het volgende SE-reviewmoment voor deelsysteem X?" en krijg direct antwoord met bronvermelding.',
     wins: ['SE-reviewmomenten automatisch gevolgd', 'Vraagspecificatie direct doorzoekbaar', 'Vroegtijdige signalering van compliance-risico\'s'],
-    quote: 'Onze D&C-contracten zijn complex. AI-Contractagent maakt ze beheersbaar.',
+    quote: 'Onze D&C-contracten zijn complex. AI-Contracts maakt ze beheersbaar.',
     quoteAuthor: 'Willem Dijkstra',
     quoteRole: 'Contractmanager, Dura Vermeer Infra',
     photo: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=960&q=90&auto=format&fit=crop',
@@ -100,7 +100,7 @@ const useCases: UseCase[] = [
     role: 'Raamcontractencoördinator',
     tagline: 'Regie over uw volledige raamcontractenportfolio',
     problem: 'Meerdere raamovereenkomsten met tientallen deelopdrachten en call-offs. Prijsafspraken, leveranciersverplichtingen en looptijden zijn verspreid over honderden documenten zonder centraal overzicht.',
-    solution: 'AI-Contractagent groepeert alle deelopdrachten per raamcontract en beantwoordt vragen als "Wat zijn de call-off condities voor leverancier X in raamovereenkomst Y?" — in seconden.',
+    solution: 'AI-Contracts groepeert alle deelopdrachten per raamcontract en beantwoordt vragen als "Wat zijn de call-off condities voor leverancier X in raamovereenkomst Y?" — in seconden.',
     wins: ['Portfolio-overzicht per raamcontract', 'Call-off condities direct opvraagbaar', 'Verloopdatums bewaakt over alle deelopdrachten'],
     quote: 'Onze raamcontracten zijn eindelijk beheersbaar. Eén systeem voor het gehele portfolio.',
     quoteAuthor: 'Irene van der Plas',
@@ -277,7 +277,7 @@ export default function UseCasesPage() {
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-5">
             Herkenbaar? Laat ons uw contracten analyseren.
           </h2>
-          <p className="text-slate-300 text-xl mb-8">Plan een demo en ontdek wat AI-Contractagent voor uw organisatie kan betekenen.</p>
+          <p className="text-slate-300 text-xl mb-8">Plan een demo en ontdek wat AI-Contracts voor uw organisatie kan betekenen.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-2xl text-lg">
               Demo aanvragen <ArrowRight className="w-5 h-5" />

@@ -32,7 +32,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center">
                 <Bot className="w-[18px] h-[18px] text-white" />
               </div>
-              <span>AI-Contractagent</span>
+              <span>AI-Contracts</span>
             </Link>
             <p className="text-sm text-slate-500 leading-relaxed mb-5 max-w-xs">
               AI-contractbeheer voor bouw & infra. Stel vragen aan uw contracten en beheer alles op één plek.
@@ -102,13 +102,13 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>© 2025 AI-Contractagent BV · KVK 12345678</p>
+          <p>© 2026 AI-Group B.V. · Zwolle</p>
           <div className="flex items-center gap-4">
             <a href="mailto:info@ai-group.nl" className="hover:text-slate-400 transition-colors">
               info@ai-group.nl
             </a>
             <span className="w-1 h-1 rounded-full bg-slate-700" />
-            <span>Made in Amsterdam 🇳🇱</span>
+            <span>Made in Nederland 🇳🇱</span>
           </div>
         </div>
       </div>

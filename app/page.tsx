@@ -7,7 +7,7 @@ import {
 import AppScreenshot from '@/components/ui/app-screenshot'
 
 const features = [
-  { icon: Bot,          color: 'from-blue-500 to-indigo-500',   bg: 'bg-blue-50',   title: 'AI-Contractagent',             description: 'Stel vragen in gewone taal. Antwoorden met exacte bronvermelding uit uw eigen documenten.' },
+  { icon: Bot,          color: 'from-blue-500 to-indigo-500',   bg: 'bg-blue-50',   title: 'AI-Contracts',             description: 'Stel vragen in gewone taal. Antwoorden met exacte bronvermelding uit uw eigen documenten.' },
   { icon: FileText,     color: 'from-indigo-500 to-purple-500', bg: 'bg-indigo-50', title: 'Contractbeheer',               description: 'Alle contracten per project. Status, type, afloopdatum en waarde op één plek.' },
   { icon: Bell,         color: 'from-orange-500 to-red-500',    bg: 'bg-orange-50', title: 'Verloopalerts',                description: 'Automatische meldingen 90, 60 en 30 dagen voor afloop. Nooit meer een contract missen.' },
   { icon: CheckSquare,  color: 'from-green-500 to-teal-500',    bg: 'bg-green-50',  title: 'Verplichtingen & goedkeuringen', description: 'Track open verplichtingen en stuur goedkeuringsworkflows aan.' },
@@ -193,7 +193,7 @@ export default function HomePage() {
               <span className="gradient-text">bouwcontracten écht werken</span>
             </h2>
             <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-              Van UAV-GC tot DBFM, van raamcontracten tot NEC4 — AI-Contractagent kent de structuur, clausules en verplichtingen van elk contracttype in de Nederlandse bouw- en infrasector.
+              Van UAV-GC tot DBFM, van raamcontracten tot NEC4 — AI-Contracts kent de structuur, clausules en verplichtingen van elk contracttype in de Nederlandse bouw- en infrasector.
             </p>
           </div>
 
@@ -245,7 +245,7 @@ export default function HomePage() {
               aan het zoeken naar contractinformatie.
             </h2>
             <p className="text-xl text-slate-200 mb-10">
-              AI-Contractagent maakt er <strong className="text-white">30 minuten</strong> van.
+              AI-Contracts maakt er <strong className="text-white">30 minuten</strong> van.
             </p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-slate-900 font-bold px-8 py-4 rounded-xl hover:bg-blue-50 transition-colors shadow-2xl text-lg">
               Bekijk hoe het werkt <ArrowRight className="w-5 h-5" />
@@ -334,7 +334,7 @@ export default function HomePage() {
               <span className="gradient-text">volledige controle</span>
             </h2>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              Bouw- en infrabedrijven die AI-Contractagent gebruiken besparen hun projectleiders
+              Bouw- en infrabedrijven die AI-Contracts gebruiken besparen hun projectleiders
               gemiddeld 8 uur per week en missen nooit meer een verloopdatum of verplichting.
             </p>
             <ul className="space-y-4 mb-10">
@@ -418,13 +418,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-widest ring-1 ring-blue-100">
-                Waarom AI-Contractagent
+                Waarom AI-Contracts
               </div>
               <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-6 leading-tight">
                 De toonaangevende keuze voor AI-contractbeheer in de bouwsector
               </h2>
               <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                Terwijl generieke platforms documentopslag bieden, bouwde AI-Contractagent een AI die écht begrijpt hoe contracten in bouw en infra zijn opgebouwd — de clausulestructuren, de risicoverdeling, de verplichtingen.
+                Terwijl generieke platforms documentopslag bieden, bouwde AI-Contracts een AI die écht begrijpt hoe contracten in bouw en infra zijn opgebouwd — de clausulestructuren, de risicoverdeling, de verplichtingen.
               </p>
               <ul className="space-y-4 mb-10">
                 {[
@@ -474,7 +474,7 @@ export default function HomePage() {
               <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" />Klantervaring
             </div>
             <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-5">Wat onze klanten zeggen</h2>
-            <p className="text-xl text-slate-500 max-w-xl mx-auto">Bouw- en infrabedrijven door heel Nederland werken dagelijks met AI-Contractagent.</p>
+            <p className="text-xl text-slate-500 max-w-xl mx-auto">Bouw- en infrabedrijven door heel Nederland werken dagelijks met AI-Contracts.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -541,7 +541,7 @@ export default function HomePage() {
                 Persoonlijk voorstel
               </div>
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-                Ontdek wat AI-Contractagent<br />
+                Ontdek wat AI-Contracts<br />
                 <span className="gradient-text">voor uw organisatie bespaart</span>
               </h2>
               <p className="text-slate-400 text-lg mb-10 leading-relaxed">

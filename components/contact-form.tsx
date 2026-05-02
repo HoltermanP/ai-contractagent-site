@@ -101,7 +101,7 @@ export default function ContactForm() {
           <div className="relative flex-1 min-h-[300px]">
             <Image
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=880&q=90&auto=format&fit=crop"
-              alt="AI-Contractagent — contractbeheer voor bouw & infra"
+              alt="AI-Contracts — contractbeheer voor bouw & infra"
               fill
               className="object-cover"
             />
