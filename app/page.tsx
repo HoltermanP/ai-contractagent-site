@@ -642,12 +642,9 @@ export default function HomePage() {
             <p className="text-slate-200 text-xl mb-10">
               Gemiddeld binnen 1 werkdag operationeel. Persoonlijke onboarding inbegrepen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold px-10 py-5 rounded-xl hover:from-blue-400 hover:to-indigo-400 transition-all shadow-2xl shadow-blue-900/60 text-xl">
                 Vraag een demo aan <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-10 py-5 rounded-xl hover:bg-white/20 transition-all text-xl">
-                Plan een demo
               </Link>
             </div>
           </div>
