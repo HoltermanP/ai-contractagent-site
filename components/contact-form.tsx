@@ -2,16 +2,18 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Mail, Phone, Clock, CheckCircle2, Send } from 'lucide-react'
+import { Mail, Phone, Clock, CheckCircle2, Send, Loader2 } from 'lucide-react'
 
 const contactInfo = [
-  { icon: Mail,  label: 'E-mail',    value: 'info@ai-group.nl', href: 'mailto:info@ai-group.nl' },
-  { icon: Phone, label: 'Telefoon', value: '06-30985351',      href: 'tel:0630985351' },
-  { icon: Clock,  label: 'Beschikbaarheid',  value: 'Ma–Vr 09:00–17:30',               href: null },
+  { icon: Mail,  label: 'E-mail',          value: 'info@ai-group.nl', href: 'mailto:info@ai-group.nl' },
+  { icon: Phone, label: 'Telefoon',         value: '06-30985351',      href: 'tel:0630985351' },
+  { icon: Clock, label: 'Beschikbaarheid', value: 'Ma–Vr 09:00–17:30', href: null },
 ]
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     naam: '', email: '', bedrijf: '', telefoon: '', onderwerp: '', bericht: '',
   })
@@ -20,9 +22,26 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError(null)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (!res.ok) {
+        const data = await res.json()
+        throw new Error(data.error ?? 'Onbekende fout')
+      }
+      setSubmitted(true)
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : 'Verzenden mislukt. Probeer het opnieuw.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -86,9 +105,15 @@ export default function ContactForm() {
                   <textarea name="bericht" required rows={5} value={formData.bericht} onChange={handleChange} placeholder="Vertel ons hoe we u kunnen helpen..."
                     className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-slate-50 hover:bg-white transition resize-none" />
                 </div>
-                <button type="submit"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-3.5 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg shadow-blue-200 w-full sm:w-auto justify-center">
-                  <Send className="w-4 h-4" />Verstuur bericht
+
+                {error && (
+                  <p className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">{error}</p>
+                )}
+
+                <button type="submit" disabled={loading}
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-3.5 rounded-xl hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg shadow-blue-200 w-full sm:w-auto justify-center disabled:opacity-60 disabled:cursor-not-allowed">
+                  {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                  {loading ? 'Versturen...' : 'Verstuur bericht'}
                 </button>
               </form>
             )}
@@ -97,7 +122,6 @@ export default function ContactForm() {
 
         {/* ── Foto + info zijde ── */}
         <div className="lg:w-[440px] flex-shrink-0 flex flex-col">
-          {/* Amsterdam gracht foto — volledig zichtbaar */}
           <div className="relative flex-1 min-h-[300px]">
             <Image
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=880&q=90&auto=format&fit=crop"
