@@ -20,7 +20,7 @@ export default function ContactPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/96 via-blue-950/90 to-indigo-950/95" />
+          <div className="absolute inset-0 bg-slate-950/82" />
         </div>
         <div className="absolute inset-0 grid-bg opacity-25" />
 
