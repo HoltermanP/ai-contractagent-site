@@ -25,14 +25,14 @@ const tiers: PricingTier[] = [
     period: '/maand',
     description: 'Ideaal voor kleinere aannemers en adviseurs die willen starten met AI-contractbeheer.',
     highlight: false,
-    cta: 'Gratis proberen',
+    cta: 'Neem contact op',
     features: [
       { label: 'Contracten', value: 'Tot 50' },
       { label: 'Gebruikers', value: '3' },
       { label: 'AI-vragen per maand', value: '200' },
       { label: 'Projecten', value: '5' },
       { label: 'Verloopalerts', value: true },
-      { label: 'Training module', value: false },
+      { label: 'AI-Risicodetectie', value: false },
       { label: 'SSO / SAML', value: false },
       { label: 'Prioriteitssupport', value: false },
       { label: 'Eigen domein', value: false },
@@ -45,14 +45,14 @@ const tiers: PricingTier[] = [
     description: 'Voor groeiende bouw- en infrateams die onbeperkt willen werken met AI-contractbeheer.',
     highlight: true,
     badge: 'Meest gekozen',
-    cta: 'Gratis proberen',
+    cta: 'Neem contact op',
     features: [
       { label: 'Contracten', value: 'Onbeperkt' },
       { label: 'Gebruikers', value: '10' },
       { label: 'AI-vragen per maand', value: 'Onbeperkt' },
       { label: 'Projecten', value: 'Onbeperkt' },
       { label: 'Verloopalerts', value: true },
-      { label: 'Training module', value: true },
+      { label: 'AI-Risicodetectie', value: true },
       { label: 'SSO / SAML', value: false },
       { label: 'Prioriteitssupport', value: true },
       { label: 'Eigen domein', value: false },
@@ -71,7 +71,7 @@ const tiers: PricingTier[] = [
       { label: 'AI-vragen per maand', value: 'Onbeperkt' },
       { label: 'Projecten', value: 'Onbeperkt' },
       { label: 'Verloopalerts', value: true },
-      { label: 'Training module', value: true },
+      { label: 'AI-Risicodetectie', value: true },
       { label: 'SSO / SAML', value: true },
       { label: 'Prioriteitssupport', value: true },
       { label: 'Eigen domein', value: true },
@@ -130,7 +130,7 @@ export default function PricingPage() {
             <span className="gradient-text">prijzen</span>
           </h1>
           <p className="text-slate-400 text-xl mb-8 max-w-xl mx-auto">
-            Kies het plan dat bij uw organisatie past. Alle plannen inclusief 14 dagen gratis proberen.
+            Kies het plan dat bij uw organisatie past. Persoonlijke onboarding bij elk abonnement inbegrepen.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-5">
             {trustItems.map(({ icon: Icon, text }) => (
@@ -201,7 +201,7 @@ export default function PricingPage() {
           </div>
 
           <p className="text-center text-sm text-slate-500 mt-8">
-            Alle abonnementen inclusief 14 dagen gratis proberen · Geen creditcard vereist · Direct opzegbaar
+            Alle abonnementen inclusief persoonlijke onboarding · Direct opzegbaar · Data in Nederland
           </p>
         </div>
       </section>

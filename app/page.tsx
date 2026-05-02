@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {
-  Bot, FileText, Bell, CheckSquare, GraduationCap, BarChart3,
+  Bot, FileText, Bell, CheckSquare, Lightbulb, BarChart3,
   ArrowRight, Sparkles, Shield, Zap, Clock, Star, Check, ChevronRight,
 } from 'lucide-react'
 import AppScreenshot from '@/components/ui/app-screenshot'
@@ -11,7 +11,7 @@ const features = [
   { icon: FileText,     color: 'from-indigo-500 to-purple-500', bg: 'bg-indigo-50', title: 'Contractbeheer',               description: 'Alle contracten per project. Status, type, afloopdatum en waarde op één plek.' },
   { icon: Bell,         color: 'from-orange-500 to-red-500',    bg: 'bg-orange-50', title: 'Verloopalerts',                description: 'Automatische meldingen 90, 60 en 30 dagen voor afloop. Nooit meer een contract missen.' },
   { icon: CheckSquare,  color: 'from-green-500 to-teal-500',    bg: 'bg-green-50',  title: 'Verplichtingen & goedkeuringen', description: 'Track open verplichtingen en stuur goedkeuringsworkflows aan.' },
-  { icon: GraduationCap, color: 'from-violet-500 to-pink-500', bg: 'bg-violet-50', title: 'Contracttraining',             description: 'Genereer e-learning modules direct vanuit uw contractdocumenten.' },
+  { icon: Lightbulb,     color: 'from-amber-500 to-orange-500',  bg: 'bg-amber-50',  title: 'AI-Risicodetectie',            description: 'AI analyseert uw portfolio op risico\'s, onduidelijkheden en tegenstrijdigheden — proactief en continu.' },
   { icon: BarChart3,    color: 'from-cyan-500 to-blue-500',     bg: 'bg-cyan-50',   title: 'AI-Rapportages',              description: 'Portfolio-samenvatting door AI. Exporteerbare rapportages van uw contractlandschap.' },
 ]
 
@@ -171,7 +171,7 @@ export default function HomePage() {
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">Alles in één platform</h2>
             <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto">
-              Van AI-gestuurde contractvragen tot automatische verloopalerts en e-learning — gebouwd voor bouw & infra.
+              Van AI-gestuurde contractvragen en risicodetectie tot verloopalerts en rapportages — gebouwd voor bouw & infra.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

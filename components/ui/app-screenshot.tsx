@@ -33,7 +33,7 @@ export default function AppScreenshot() {
               { label: 'Contracten', active: false, dot: 'bg-slate-600' },
               { label: 'Projecten', active: false, dot: 'bg-slate-600' },
               { label: 'Verplichtingen', active: false, dot: 'bg-slate-600' },
-              { label: 'Training', active: false, dot: 'bg-slate-600' },
+              { label: 'Inzichten', active: false, dot: 'bg-slate-600' },
             ].map((item) => (
               <div
                 key={item.label}

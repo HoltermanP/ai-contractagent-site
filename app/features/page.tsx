@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
-  Bot, FileText, LayoutDashboard, FolderOpen, Lightbulb,
-  CheckSquare, Bell, GraduationCap, Settings, ArrowRight, Check,
+  Bot, FileText, LayoutDashboard,
+  CheckSquare, Bell, Lightbulb, Settings, ArrowRight, Check,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Functies — AI-Contractagent',
-  description: 'Ontdek alle modules van AI-Contractagent: AI-contractvragen, verloopalerts, e-learning en rapportages.',
+  description: 'Ontdek alle modules van AI-Contractagent: AI-contractvragen, risicodetectie, verloopalerts en rapportages.',
 }
 
 interface Module {
@@ -108,19 +108,19 @@ const modules: Module[] = [
     ],
   },
   {
-    icon: GraduationCap,
-    color: 'from-violet-600 to-purple-600',
-    textAccent: 'text-violet-600',
-    title: 'Training & E-learning',
-    description: 'Genereer gestructureerde trainingen op basis van uw eigen contracten. Exporteer direct als presentatie.',
+    icon: Lightbulb,
+    color: 'from-amber-500 to-orange-500',
+    textAccent: 'text-amber-700',
+    title: 'AI-Risicodetectie & Analyse',
+    description: 'AI scant uw contractportfolio proactief op risico\'s, tegenstrijdigheden en onduidelijke clausules — zodat u altijd een stap voor bent.',
     bullets: [
-      'Trainingen op basis van contracten en documenten',
-      'Modules met leerdoelen, theorie en praktijkscenario\'s',
-      'Export als Gamma-presentatie (directe integratie)',
-      'Admin-only module',
+      'Automatische kwaliteitsscan per contract',
+      'Signalering van onduidelijke en tegenstrijdige clausules',
+      'Risico-overzicht op portefeuilleniveau',
+      'AI-clustering van terugkerende knelpunten',
     ],
-    photo: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=90&auto=format&fit=crop',
-    photoAlt: 'E-learning training sessie',
+    photo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=90&auto=format&fit=crop',
+    photoAlt: 'AI risicoanalyse dashboard',
   },
   {
     icon: Settings,
@@ -157,7 +157,7 @@ export default function FeaturesPage() {
               professioneel, AI-ondersteund contractbeheer.
             </p>
             <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-7 py-3.5 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-lg">
-              Start gratis <ArrowRight className="w-4 h-4" />
+              Vraag een demo aan <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -308,9 +308,9 @@ export default function FeaturesPage() {
         <div className="absolute inset-0 bg-slate-950/55" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl sm:text-5xl font-black text-white mb-5">Klaar om te starten?</h2>
-          <p className="text-slate-300 text-xl mb-8">14 dagen gratis proberen. Geen creditcard vereist.</p>
+          <p className="text-slate-300 text-xl mb-8">Persoonlijke onboarding inbegrepen. Gemiddeld binnen 1 werkdag operationeel.</p>
           <Link href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-10 py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-2xl text-lg">
-            Start gratis proefperiode <ArrowRight className="w-5 h-5" />
+            Vraag een demo aan <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>
