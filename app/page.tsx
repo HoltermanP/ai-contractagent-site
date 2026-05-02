@@ -43,8 +43,6 @@ const testimonials = [
   },
 ]
 
-const logos = ['Bouwbedrijf De Vries', 'Infra Noord BV', 'Projectbureau Rijnland', 'Van Oord Infra', 'Heijmans Projects']
-
 export default function HomePage() {
   return (
     <div className="overflow-x-hidden">
@@ -67,53 +65,51 @@ export default function HomePage() {
         {/* Subtiele blauwe gloed linksboven */}
         <div className="absolute top-0 left-0 w-[600px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative w-full max-w-screen-xl mx-auto px-6 sm:px-10 lg:px-16 py-24 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+        <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
 
             {/* ── Linkerkolom: tekst ── */}
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 glass text-blue-300 text-sm font-medium px-4 py-2 rounded-full mb-8">
-                <Sparkles className="w-4 h-4 text-blue-400" />
-                <span>Nieuw: Contracttraining & e-learning</span>
-                <ChevronRight className="w-4 h-4 opacity-60" />
-              </div>
-
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.04] text-white mb-7">
+            <div className="max-w-xl lg:max-w-[34rem]">
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black leading-tight text-white mb-6">
                 Beheer uw<br />
                 <span className="gradient-text">contracten.</span><br />
                 <span className="text-slate-200">Stel er vragen aan.</span>
               </h1>
 
-              <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg text-slate-300 mb-10 leading-relaxed max-w-xl">
                 Het slimme contractbeheersysteem voor bouw- en infrabedrijven.
                 Upload contracten, stel vragen in gewone taal en ontvang antwoorden
                 met exacte bronvermelding — direct uit uw eigen documenten.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row gap-3 mb-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-9 py-4.5 py-[1.1rem] rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-xl shadow-blue-900/50 text-base"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold px-8 py-3.5 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-xl shadow-blue-900/50 text-sm"
                 >
-                  Start gratis proefperiode <ArrowRight className="w-4 h-4" />
+                  Vraag een demo aan <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/features"
-                  className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-9 py-[1.1rem] rounded-xl hover:bg-white/15 transition-all text-base"
+                  className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-white/15 transition-all text-sm"
                 >
-                  Bekijk alle functies
+                  Bekijk functies
                 </Link>
               </div>
 
-              <div className="flex flex-wrap gap-6 text-sm text-slate-400">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-slate-200">
                 {[
-                  { icon: Shield, t: 'GDPR-compliant' },
-                  { icon: Shield, t: 'ISO 27001' },
-                  { icon: Star,   t: '14 dagen gratis' },
-                  { icon: Zap,    t: 'Geen creditcard' },
+                  { icon: Star,    t: 'Premium Microsoft Partner' },
+                  { icon: Shield,  t: 'Security-first contractbeheer' },
+                  { icon: Check,   t: 'Enterprise-ready workflows' },
+                  { icon: Sparkles, t: 'Nederlandse juridische support' },
+                  { icon: Zap,     t: 'Integratie met Microsoft 365' },
                 ].map(({ icon: I, t }) => (
-                  <div key={t} className="flex items-center gap-1.5">
-                    <I className="w-4 h-4 text-blue-400" />{t}
+                  <div key={t} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/50 px-3 py-2 text-[11px] leading-4 shadow-sm shadow-black/10 backdrop-blur-sm">
+                    <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-500/10 text-blue-300">
+                      <I className="w-3.5 h-3.5" />
+                    </div>
+                    <span className="text-slate-200">{t}</span>
                   </div>
                 ))}
               </div>
@@ -128,21 +124,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════════
-          LOGOS BAR
-      ══════════════════════════════════════════════ */}
-      <section className="bg-slate-900 border-y border-white/8 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs font-bold text-slate-500 mb-6 uppercase tracking-widest">Gebruikt door aannemers, projectmanagers en juristen</p>
-          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-8">
-            {logos.map((n) => (
-              <div key={n} className="h-10 px-5 bg-slate-800 border border-white/8 rounded-xl flex items-center">
-                <span className="text-sm font-semibold text-slate-400">{n}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ══════════════════════════════════════════════
           UITDAGING — dramatische foto, tekst er overheen
@@ -178,14 +159,18 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════════
           FEATURES — wit, clean
       ══════════════════════════════════════════════ */}
-      <section className="bg-white py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-2 rounded-full mb-5">
+      <section className="relative bg-gradient-to-b from-slate-50 to-white py-24 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 dot-bg opacity-[0.35]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[320px] bg-blue-100/70 rounded-full blur-[90px] pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[300px] bg-indigo-100/50 rounded-full blur-[80px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-4 ring-1 ring-blue-100">
               <Zap className="w-4 h-4" />Platform functies
             </div>
-            <h2 className="text-4xl sm:text-5xl font-black text-slate-900 mb-5">Alles in één platform</h2>
-            <p className="text-xl text-slate-500 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">Alles in één platform</h2>
+            <p className="text-base sm:text-lg text-slate-500 max-w-2xl mx-auto">
               Van AI-gestuurde contractvragen tot automatische verloopalerts en e-learning — gebouwd voor bouw & infra.
             </p>
           </div>
@@ -193,7 +178,7 @@ export default function HomePage() {
             {features.map((f) => {
               const Icon = f.icon
               return (
-                <div key={f.title} className="group bg-white border border-slate-100 rounded-2xl p-7 card-hover shadow-sm">
+                <div key={f.title} className="group bg-white/80 border border-slate-200/70 rounded-2xl p-7 card-hover shadow-md shadow-slate-200/60 backdrop-blur-sm">
                   <div className={`w-12 h-12 rounded-2xl ${f.bg} flex items-center justify-center mb-5`}>
                     <div className={`w-8 h-8 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center`}>
                       <Icon className="w-4 h-4 text-white" />
@@ -220,8 +205,8 @@ export default function HomePage() {
         {/* Foto kolom — geen overlay, volle kleur */}
         <div className="relative lg:w-1/2 min-h-[400px] lg:min-h-0 overflow-hidden">
           <Image
-            src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=960&q=90&auto=format&fit=crop"
-            alt="Projectmanager beheert contracten op laptop op bouwplaats"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=960&q=90&auto=format&fit=crop"
+            alt="Contract management dashboard"
             fill
             className="object-cover object-center"
           />
@@ -408,7 +393,7 @@ export default function HomePage() {
             </h2>
             <p className="text-blue-100 text-lg mb-8 leading-relaxed">
               Kies het plan dat bij uw organisatie past. Alle abonnementen inclusief
-              14 dagen gratis proberen en persoonlijke onboarding.
+              persoonlijke onboarding en directe ondersteuning.
             </p>
             <div className="grid grid-cols-3 gap-3 mb-8">
               {[
@@ -451,11 +436,11 @@ export default function HomePage() {
               <span className="gradient-text">contractbeheer</span>
             </h2>
             <p className="text-slate-200 text-xl mb-10">
-              14 dagen gratis proberen. Geen creditcard. Gemiddeld binnen 1 werkdag operationeel.
+              Gemiddeld binnen 1 werkdag operationeel. Persoonlijke onboarding inbegrepen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-bold px-10 py-5 rounded-xl hover:from-blue-400 hover:to-indigo-400 transition-all shadow-2xl shadow-blue-900/60 text-xl">
-                Start gratis proefperiode <ArrowRight className="w-5 h-5" />
+                Vraag een demo aan <ArrowRight className="w-5 h-5" />
               </Link>
               <Link href="/contact" className="inline-flex items-center justify-center gap-2 glass text-white font-semibold px-10 py-5 rounded-xl hover:bg-white/20 transition-all text-xl">
                 Plan een demo
