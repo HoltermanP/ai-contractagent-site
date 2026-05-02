@@ -523,44 +523,97 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════════════════════════════════════
-          SECOND SPLIT — andersom (tekst links, foto rechts)
-          Wederom: foto volledig zichtbaar
+          OFFERTE — lokkende lead-gen sectie
       ══════════════════════════════════════════════ */}
-      <section className="flex flex-col lg:flex-row-reverse min-h-[560px]">
-        {/* Foto kolom rechts — volledig zichtbaar */}
-        <div className="relative lg:w-1/2 min-h-[380px] lg:min-h-0 overflow-hidden">
-          <Image
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=960&q=90&auto=format&fit=crop"
-            alt="Team werkt samen aan contracten"
-            fill
-            className="object-cover object-center"
-          />
-        </div>
-        {/* Tekst kolom links */}
-        <div className="lg:w-1/2 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center">
-          <div className="px-10 py-16 lg:px-16 lg:py-20 max-w-xl">
-            <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-              Prijzen op maat voor uw organisatie
-            </h2>
-            <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-              Elke organisatie is anders. Wij stellen een transparant voorstel op
-              op basis van uw specifieke situatie — geen verborgen kosten.
-            </p>
-            <div className="grid grid-cols-3 gap-3 mb-8">
-              {[
-                { name: 'Regionaal', price: 'Op aanvraag' },
-                { name: 'Nationaal', price: 'Op aanvraag' },
-                { name: 'Enterprise', price: 'Op aanvraag' },
-              ].map((tier) => (
-                <div key={tier.name} className="bg-white/15 border border-white/25 rounded-xl p-4 text-center">
-                  <div className="text-white/70 text-xs mb-1">{tier.name}</div>
-                  <div className="text-white font-bold text-sm">{tier.price}</div>
-                </div>
-              ))}
+      <section className="relative overflow-hidden bg-slate-950 py-20 lg:py-28">
+        <div className="absolute inset-0 dot-bg opacity-20" />
+        {/* Blauwe gloed links */}
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[600px] h-[500px] bg-blue-600/15 rounded-full blur-[100px] pointer-events-none" />
+        {/* Indigo gloed rechts */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[80px] pointer-events-none" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+
+            {/* Links: de propositie */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-500/30 text-blue-300 text-xs font-bold px-4 py-2 rounded-full mb-7 uppercase tracking-widest">
+                Persoonlijk voorstel
+              </div>
+              <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+                Ontdek wat AI-Contractagent<br />
+                <span className="gradient-text">voor uw organisatie bespaart</span>
+              </h2>
+              <p className="text-slate-400 text-lg mb-10 leading-relaxed">
+                Wij rekenen graag uit hoeveel uren — en kosten — u bespaart. Vraag een vrijblijvend voorstel aan en wij demonstreren het platform aan uw team.
+              </p>
+              <ul className="space-y-4 mb-10">
+                {[
+                  { label: 'Persoonlijke demo op maat',        sub: 'Wij demonstreren precies wat voor ú relevant is' },
+                  { label: 'Voorstel binnen 2 werkdagen',      sub: 'Transparant, zonder verborgen kosten' },
+                  { label: 'Implementatie binnen 1 werkdag',   sub: 'Onboarding door onze specialisten inbegrepen' },
+                  { label: 'Geen langlopende verplichtingen',  sub: 'Maandelijks opzegbaar, altijd dataexport mogelijk' },
+                ].map(({ label, sub }) => (
+                  <li key={label} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-white" />
+                    </div>
+                    <div>
+                      <span className="text-white font-semibold text-sm">{label}</span>
+                      <span className="text-slate-500 text-sm"> — {sub}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold px-7 py-3.5 rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
-              Vraag een offerte aan <ArrowRight className="w-4 h-4" />
-            </Link>
+
+            {/* Rechts: de offerte-kaart */}
+            <div className="bg-slate-900 border border-white/10 rounded-3xl p-8 lg:p-10 shadow-2xl shadow-black/40">
+              <div className="text-white font-black text-2xl mb-2">Vraag een demo aan</div>
+              <p className="text-slate-400 text-sm mb-8">
+                Vul uw gegevens in — wij nemen binnen één werkdag contact op.
+              </p>
+
+              <div className="space-y-4 mb-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-400 mb-1.5">Voornaam</label>
+                    <div className="bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-slate-500 text-sm">Jan</div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-400 mb-1.5">Achternaam</label>
+                    <div className="bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-slate-500 text-sm">de Vries</div>
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-400 mb-1.5">Bedrijf</label>
+                  <div className="bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-slate-500 text-sm">Bouwbedrijf De Vries BV</div>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-400 mb-1.5">E-mailadres</label>
+                  <div className="bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-slate-500 text-sm">jan@bouwbedrijfdevries.nl</div>
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-400 mb-1.5">Aantal contracten (schatting)</label>
+                  <div className="bg-slate-800 border border-white/10 rounded-xl px-4 py-3 text-slate-500 text-sm flex justify-between items-center">
+                    <span>10 – 50 contracten</span>
+                    <ChevronRight className="w-4 h-4 opacity-40" />
+                  </div>
+                </div>
+              </div>
+
+              <Link
+                href="/contact"
+                className="block w-full text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-4 rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all shadow-xl shadow-blue-900/40 text-base"
+              >
+                Stuur aanvraag in <ArrowRight className="inline-block w-4 h-4 ml-1" />
+              </Link>
+
+              <p className="text-center text-slate-600 text-xs mt-4">
+                Vrijblijvend · Geen creditcard · Reactie binnen 1 werkdag
+              </p>
+            </div>
+
           </div>
         </div>
       </section>
