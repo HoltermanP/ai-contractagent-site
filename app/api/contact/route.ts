@@ -1,7 +1,15 @@
 import { NextResponse } from 'next/server'
-import { Resend } from 'resend'
+import nodemailer from 'nodemailer'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT ?? 587),
+  secure: process.env.SMTP_SECURE === 'true',
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+})
 
 export async function POST(request: Request) {
   try {
@@ -18,8 +26,8 @@ export async function POST(request: Request) {
       overig: 'Overig',
     }
 
-    await resend.emails.send({
-      from: 'AI-Contracts <noreply@ai-contractagent.nl>',
+    await transporter.sendMail({
+      from: `"AI-Contracts" <${process.env.SMTP_FROM ?? process.env.SMTP_USER}>`,
       to: 'info@ai-group.nl',
       replyTo: email,
       subject: `Nieuw contactformulier: ${(onderwerpLabel[onderwerp] ?? onderwerp) || 'Geen onderwerp'}`,
